@@ -1,4 +1,4 @@
 SimpleGame
 ==========
 
-SimpleApp Tutorial off libgdx
+SimpleApp Tutorial by libgdx
