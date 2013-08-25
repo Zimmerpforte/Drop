@@ -138,7 +138,6 @@ public class Drop implements ApplicationListener {
 		          dropSound.play();
 		          iter.remove();
 		       }
-	      }
 	   }
 	@Override
 	public void resize(int width, int height) {
