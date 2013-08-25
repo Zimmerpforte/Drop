@@ -1,0 +1,26 @@
+INDEX VERSION 1.126+C:\Users\Lukas\Documents\GitHub\Drop\.metadata\.plugins\org.eclipse.jdt.core
+473232152.index
+1115467115.index
+4041092966.index
+3974580528.index
+930039096.index
+1498219845.index
+1187633580.index
+1299022128.index
+2897409713.index
+1437195958.index
+3701945814.index
+3065916431.index
+4155206848.index
+334285809.index
+3174114774.index
+305854171.index
+4108727661.index
+1787826153.index
+1995173708.index
+30765161.index
+163172794.index
+3566199647.index
+3133528496.index
+2515347022.index
+673117321.index
