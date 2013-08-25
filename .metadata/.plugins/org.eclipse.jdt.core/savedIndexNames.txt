@@ -7,7 +7,6 @@ INDEX VERSION 1.126+C:\Users\Lukas\Documents\GitHub\Drop\.metadata\.plugins\org.
 1498219845.index
 1187633580.index
 1299022128.index
-2897409713.index
 1437195958.index
 3701945814.index
 3065916431.index
