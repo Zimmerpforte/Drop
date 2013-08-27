@@ -114,6 +114,7 @@ public class Drop implements ApplicationListener {
 	      for(Rectangle raindrop: raindrops) {
 	         batch.draw(dropImage, raindrop.x, raindrop.y);
 	      }
+	      font.draw(batch, "Welcome to Drop!!!", 100, 150);
 	      batch.end();
 
 	      

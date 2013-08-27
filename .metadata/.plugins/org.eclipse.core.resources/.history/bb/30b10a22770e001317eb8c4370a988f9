@@ -1,7 +1,6 @@
 package de.zimmerpforte.drop;
 
 
-import java.awt.Font;
 import java.util.Iterator;
 
 import com.badlogic.gdx.ApplicationListener;
@@ -42,9 +41,16 @@ public class Drop implements ApplicationListener {
 	   /*
 	    * counter vars
 	    */
-	   int counterAll = 0;
-	   int counterCatched = 0;
+	   int counterAll;
+	   int counterCatched;
+	   int counterMissed;
 	   
+	   /*
+	    * text vars
+	    */
+	   TextureAtlas textureAtlas = new TextureAtlas("data/main");
+	BitmapFont font = new BitmapFont(Gdx.files.internal("data/calibri.fnt"),
+	   textureAtlas.findRegion("calibri"), false);
 	   
 	   @Override
 	   public void create() {
@@ -79,6 +85,7 @@ public class Drop implements ApplicationListener {
 	      raindrops = new Array<Rectangle>();
 	      spawnRaindrop();
 	      
+	      font.draw(spritebatch, "my-string", x, y);
 	   }
 
 
@@ -148,12 +155,8 @@ public class Drop implements ApplicationListener {
 		      if(raindrop.overlaps(bucket)) {
 		          dropSound.play();
 		          iter.remove();
-		          counterCatched++;
 		       }
 	      }
-	      
-	      System.out.println("Dropped Drops: " + counterAll);
-	      System.out.println("Catched Drops: " + counterCatched);
 	   }
 	@Override
 	public void resize(int width, int height) {
@@ -178,6 +181,5 @@ public class Drop implements ApplicationListener {
 	      raindrop.height = 64;
 	      raindrops.add(raindrop);
 	      lastDropTime = TimeUtils.nanoTime();
-	      counterAll++;
 	   }
 }

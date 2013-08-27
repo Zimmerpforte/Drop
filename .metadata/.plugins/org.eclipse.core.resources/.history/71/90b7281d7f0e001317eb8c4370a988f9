@@ -45,6 +45,12 @@ public class Drop implements ApplicationListener {
 	   int counterAll = 0;
 	   int counterCatched = 0;
 	   
+	   /*
+	    * text vars
+	    */
+	   TextureAtlas textureAtlas = new TextureAtlas("data/main");
+	   BitmapFont font;
+	   
 	   
 	   @Override
 	   public void create() {
@@ -79,6 +85,9 @@ public class Drop implements ApplicationListener {
 	      raindrops = new Array<Rectangle>();
 	      spawnRaindrop();
 	      
+	      font = new BitmapFont(Gdx.files.internal("data/calibri.fnt"),
+	    		  textureAtlas.findRegion("calibri"), false);
+	               //Gdx.files.internal("data/digib.png"), false);
 	   }
 
 
@@ -114,6 +123,7 @@ public class Drop implements ApplicationListener {
 	      for(Rectangle raindrop: raindrops) {
 	         batch.draw(dropImage, raindrop.x, raindrop.y);
 	      }
+	      font.draw(batch, "Welcome to Drop!!!", 100, 150);
 	      batch.end();
 
 	      

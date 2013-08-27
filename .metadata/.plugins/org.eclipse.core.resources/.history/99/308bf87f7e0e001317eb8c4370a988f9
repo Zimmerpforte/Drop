@@ -45,6 +45,11 @@ public class Drop implements ApplicationListener {
 	   int counterAll = 0;
 	   int counterCatched = 0;
 	   
+	   /*
+	    * text vars
+	    */
+	   Font font;
+	   
 	   
 	   @Override
 	   public void create() {
@@ -78,7 +83,6 @@ public class Drop implements ApplicationListener {
 	      //call for spawnRaindrop function
 	      raindrops = new Array<Rectangle>();
 	      spawnRaindrop();
-	      
 	   }
 
 
@@ -114,6 +118,7 @@ public class Drop implements ApplicationListener {
 	      for(Rectangle raindrop: raindrops) {
 	         batch.draw(dropImage, raindrop.x, raindrop.y);
 	      }
+	      font.draw(batch, "Welcome to Drop!!!", 100, 150);
 	      batch.end();
 
 	      

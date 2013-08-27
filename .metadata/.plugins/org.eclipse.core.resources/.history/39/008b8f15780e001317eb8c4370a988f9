@@ -1,7 +1,6 @@
 package de.zimmerpforte.drop;
 
 
-import java.awt.Font;
 import java.util.Iterator;
 
 import com.badlogic.gdx.ApplicationListener;
@@ -44,7 +43,7 @@ public class Drop implements ApplicationListener {
 	    */
 	   int counterAll = 0;
 	   int counterCatched = 0;
-	   
+	   int counterMissed = 0;
 	   
 	   @Override
 	   public void create() {
@@ -78,7 +77,6 @@ public class Drop implements ApplicationListener {
 	      //call for spawnRaindrop function
 	      raindrops = new Array<Rectangle>();
 	      spawnRaindrop();
-	      
 	   }
 
 
@@ -150,10 +148,12 @@ public class Drop implements ApplicationListener {
 		          iter.remove();
 		          counterCatched++;
 		       }
+		      else counterMissed++;
 	      }
 	      
 	      System.out.println("Dropped Drops: " + counterAll);
 	      System.out.println("Catched Drops: " + counterCatched);
+	      System.out.println("Missed Drops: " + counterMissed);
 	   }
 	@Override
 	public void resize(int width, int height) {
